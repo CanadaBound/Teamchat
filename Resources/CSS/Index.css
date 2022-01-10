@@ -275,6 +275,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .Text-Area-2{
@@ -283,6 +284,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .Text-Area-3{
@@ -291,6 +293,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .Description-Title{
@@ -319,15 +322,37 @@ body{
 
 .Image-1{
   grid-area: Image-1;
+  
 }
 
 .Image-2{
   grid-area: Image-2;
+  
 }
 
 .Image-3{
   grid-area: Image-3;
+  
 }
+
+.Reveal{
+  opacity: 0;
+}
+
+.Reveal.Active, .Reveal.Active, .Reveal.Active, .Reveal.active, .Reveal.Active, .Reveal.Active{
+  opacity: 1;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) { 
+  .Reveal.Active.Left, .Reveal.Active.Left, .Reveal.Active.Left{
+  animation: 1s ease-out 0s 1 slideFromLeft;
+  }
+
+  .Reveal.Active.Right, .Reveal.Active.Right, .Reveal.Active.Right{
+    animation: 1s ease-out 0s 1 slideFromRight;
+  }
+}
+
 
 /*Review section styling*/
 
@@ -575,5 +600,26 @@ body{
   margin: 0 0 10px 0;
 }
 
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 
