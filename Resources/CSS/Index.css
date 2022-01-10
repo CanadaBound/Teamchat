@@ -57,7 +57,7 @@
 body{
   display: grid; 
   grid-template-columns: 100%; 
-  grid-template-rows: 700px 2260px 250px; 
+  grid-template-rows: 100vh max-content 250px; 
   gap: 0px 0px; 
   grid-template-areas: 
     "Nav-Bar-Wrapper"
@@ -71,7 +71,7 @@ body{
 }
 
 body::-webkit-scrollbar{
-DISPLAY:NONE
+display: none;
 }
 
 
@@ -184,7 +184,7 @@ DISPLAY:NONE
   top: 15%;
   background-color: #fff;
   z-index: 1;
-  transform: translateY(-600px);
+  transform: translateY(-2000px);
 }
 
 .Mobile-Menu{
@@ -885,9 +885,6 @@ DISPLAY:NONE
   .C2A-Images{
     width: 100%;
   }
-  body{ 
-    grid-template-rows: 1000px 2600px 250px; 
-  }
   .C2A-Text{
     padding: 0 0 0 100px;
   }
@@ -982,9 +979,7 @@ DISPLAY:NONE
     transform: scale(0.75);
     left: 5%;
   }
-  body{
-    grid-template-rows: 700px 2500px 400px; 
-  }
+  
   .Footer-Wrapper { 
     height: 400px;
     flex-direction: column;

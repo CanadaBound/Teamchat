@@ -11,7 +11,7 @@ const mobileMenuToggle = function(){
 			mobileMenu.style.transform = 'translateY(0px)';
 		}else{
 			mobileMenu.style.animation = '0.75s ease-out 0s 1 closeMenu';
-			mobileMenu.style.transform = 'translateY(-600px)';
+			mobileMenu.style.transform = 'translateY(-2000px)';
 		}
 	}
 
