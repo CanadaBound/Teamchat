@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./Resources/CSS/Index.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<script type="text/javascript" src="Slider.js" defer></script>
 	<script type="text/javascript" src="Animation.js" defer></script>
+	<script type="text/javascript" src="MobileMenuToggle.js" defer></script>
 	<title></title>
 </head> 
 <body>
@@ -14,6 +17,7 @@
 		<nav class="Nav-Bar">
 			<div class="Left-Container">
 				<img src="./Resources/SVG/logo.svg" alt="Teamchat">
+				<button class="Mobile-Menu"><img alt ='Hamburger Menu Icon' src='./Resources/SVG/Menu.svg'></button> 
 			</div>
 			<div class="Central-Container">
 				<a class="Nav-Link-Active" href=#>Home</a>
@@ -24,6 +28,14 @@
 				<a class="Nav-Link" href=#>Login</a>
 				<button class="Nav-Button">Sign Up</button>
 			</div>	
+		</nav>
+		<nav class="Nav-Bar-Mobile">
+			<a class="Nav-Link-Mobile" href=#>Home</a>
+			<a class="Nav-Link-Mobile" href=#>About</a>
+			<a class="Nav-Link-Mobile" href=#>Products</a>
+			<a class="Nav-Link-Mobile" href=#>Login</a>
+			<button class="Nav-Button-Mobile">Sign Up</button>
+
 		</nav>
 		<!-- Section underneath Navigation -->
 		<section class="Call-To-Action-Wrapper">

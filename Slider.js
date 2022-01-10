@@ -1,24 +1,37 @@
 // Slider
 const slider = function () {
+
 	const slides = document.querySelectorAll('.Review-Card');
 	const btnLeft = document.querySelector('.Left-Arrow-Button');
 	const btnRight = document.querySelector('.Right-Arrow-Button');
+
   
 	let curSlide = 0;
 	const maxSlide = slides.length;
   
-	const goToSlide = function (slide) {
-	  slides.forEach(
-		(s, i) => {
-			s.style.transform = `translateX(${100 * (i - slide)}%)`;
-			if(i===curSlide){
-				s.style.filter = 'brightness(100%)';
-			}else{
-				s.style.filter = 'brightness(60%)';
-			}
-	  }
-	  );
-	 
+	const goToSlide = function (slide, firstLoad) {
+	
+	if(slide !== 0 && slide !== maxSlide-1){
+		slides[slide-1].style.filter = 'brightness(60%)';
+		slides[slide+1].style.filter = 'brightness(60%)';
+		slides[slide].style.filter = 'brightness(100%)';
+
+	}else if(slide === 0){
+		slides[maxSlide-1].style.filter = 'brightness(60%)';
+		slides[slide+1].style.filter = 'brightness(60%)';
+		slides[slide].style.filter = 'brightness(100%)';
+
+	}else{
+		slides[slide-1].style.filter = 'brightness(60%)';
+		slides[0].style.filter = 'brightness(60%)';
+		slides[slide].style.filter = 'brightness(100%)';
+
+	}
+	if(!firstLoad){
+		slides[slide].scrollIntoView({behavior: 'smooth', inline: 'center'});
+	}
+	
+	
 	};
   
 	// Next slide
@@ -29,7 +42,7 @@ const slider = function () {
 		curSlide++;
 	  }
   
-	  goToSlide(curSlide);
+	  goToSlide(curSlide, false);
 	};
   
 	const prevSlide = function () {
@@ -38,11 +51,11 @@ const slider = function () {
 	  } else {
 		curSlide--;
 	  }
-	  goToSlide(curSlide);
+	  goToSlide(curSlide, false);
 	};
   
 	const init = function () {
-	  goToSlide(0);
+	  goToSlide(0, true);
 	};
 	init();
   
