@@ -1,0 +1,579 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+	box-sizing: border-box;
+  }
+  /*
+	2. Remove default margin
+  */
+  * {
+	margin: 0;
+  }
+  /*
+	3. Allow percentage-based heights in the application
+  */
+  html, body {
+	height: 100%;
+  }
+  /*
+	Typographic tweaks!
+	4. Add accessible line-height
+	5. Improve text rendering
+  */
+  body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+  }
+  /*
+	6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+  }
+  /*
+	7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+	font: inherit;
+  }
+  /*
+	8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+  }
+  /*
+	9. Create a root stacking context
+  */
+  #root, #__next {
+	isolation: isolate;
+  }
+
+
+/*Start of actual design css for website*/
+
+body{
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 700px 2260px 250px; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Nav-Bar-Wrapper"
+    "Main-Content-Wrapper"
+    "Footer-Wrapper"; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/*Header/Call to action css*/
+
+.Nav-Bar-Wrapper{
+  grid-area: Nav-Bar-Wrapper; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #11106F 0%, #11106F 62.5%, #E5E5E5 62.5%, #E5E5E5 100%);
+}
+
+.Nav-Bar{
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 0 0;
+}
+
+.Nav-Bar a{
+  padding: 12.5px 0 0 0;
+  margin: 0 25px 0 25px;
+}
+
+.Left-Container{
+  height: 100%;
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Central-Container{
+  height: 100%;
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Right-Container{
+  height: 100%;
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Nav-Link{
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.Nav-Link:hover{
+  border-bottom: 2px solid #FFF;
+}
+
+.Nav-Link-Active{
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #FFF;
+  text-decoration: none;
+  border-bottom: 2px solid #FFF;
+}
+
+.Right-Container a{
+  color: #000;
+}
+
+.Right-Container a:hover{
+  border-bottom: 2px solid #000;
+}
+
+.Nav-Button{
+  font-size: 1.1rem;
+  height: 50px;
+  width: 150px;
+  color: #000;
+  background: #FE7234;
+  box-shadow: 0px 2px 20px rgba(254, 114, 52, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.Nav-Button:hover{
+  background: #ff6320;
+}
+
+.Call-To-Action-Wrapper{
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.C2A-Text{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 0 0 150px;
+}
+
+.Welcome-Text{
+  color: rgba(218, 218, 218, 1);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.Welcome-Text-Large{
+  color: #fff;
+  font-size: 3.1rem;
+  font-weight: 600;
+}
+
+.Underline{
+  height: 0px;
+  width: 50px;
+  border-bottom: 2px solid #FFE8AA;
+  margin: 30px 0 30px 0;
+}
+
+.C2A-Button{
+  font-size: 1.1rem;
+  height: 50px;
+  width: 150px;
+  color: #000;
+  background: #FE7234;
+  border-radius: 10px; 
+  border: none;
+  cursor: pointer;
+}
+
+.C2A-Button:hover{
+  box-shadow: 0px 1px 25px rgba(254, 114, 52, 0.4);
+  background: #ff6320;
+}
+
+.C2A-Images{
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.Rounded-Photo-Lady{
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 8%;
+}
+
+.Rounded-Photo-Man{
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+}
+
+.Popup-Without-Triangle{
+  position: absolute;
+  top: 60%;
+  left: 8%;
+}
+
+.Popup-With-Triangle{
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+/*Main content styling*/
+
+.Main-Content-Wrapper { 
+  grid-area: Main-Content-Wrapper; 
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 50px 0px; 
+  grid-template-areas: 
+    "Text-Area-1 Image-1"
+    "Image-2 Text-Area-2"
+    "Text-Area-3 Image-3"
+    "Review-Section Review-Section";
+  padding: 75px 0 0 0;
+
+}
+
+.Text-Area-1{
+  grid-area: Text-Area-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Text-Area-2{
+  grid-area: Text-Area-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Text-Area-3{
+  grid-area: Text-Area-3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Description-Title{
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgba(68, 68, 68, 1);
+}
+
+.Underline-Orange{
+  height: 0px;
+  width: 25px;
+  border-bottom: 2px solid #FE7234;
+}
+
+.Description-Text{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(68, 68, 68, 0.8);
+}
+
+.Text-Wrapper{
+  height: 100%;
+  width: 50%;
+  margin: 100px 0 0 0;
+}
+
+.Image-1{
+  grid-area: Image-1;
+}
+
+.Image-2{
+  grid-area: Image-2;
+}
+
+.Image-3{
+  grid-area: Image-3;
+}
+
+/*Review section styling*/
+
+.Review-Section{
+  grid-area: Review-Section;
+  background: #F3F3FF;
+}
+
+.Review-Title{
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 30px 0;
+}
+
+.Review-Card-Wrapper{
+  height: max-content;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.Review-Card-Wrapper::-webkit-scrollbar{
+  display: none;
+}
+
+
+/*Review Card styling*/
+.Review-Card{
+  height: 300px;
+  width: 280px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -100px 0 -100px;
+  filter: brightness(60%);
+}
+
+
+
+.Review-Card-First{
+  height: 300px;
+  width: 280px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -100px 0 -800px;
+  filter: brightness(60%);
+}
+
+.Review-Card-Last{
+  height: 300px;
+  width: 280px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -600px 0 -100px;
+  filter: brightness(60%);
+}
+
+.Star-Rating-Container{
+  height: 75px;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0 0 20px;
+}
+
+.Star-Rating-Container img{
+  margin: 0 5px 0 0;
+}
+
+.Review-Text-Container{
+  height: 125px;
+  width: 280px;
+  padding:0 20px 0 20px;
+}
+
+.Review-Text{
+  font-size: 0.8rem;
+  color: rgba(34, 34, 34, 0.8);
+}
+
+.Author-Container{
+  height: 100px;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Profile-Pic{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 0 0 0 20px;
+}
+
+.Name{
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.Reviewer-Info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 0 0 10px;
+}
+.Title{
+  font-size: 0.6rem;
+  color: rgba(34, 34, 34, 0.8);
+}
+
+.Review-Card-Control{
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Left-Arrow-Button{
+  background:transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.Right-Arrow-Button{
+  background:transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 40px 0 0;
+}
+
+.Left-Arrow-Button:hover img{
+  filter: brightness(0) saturate(100%) invert(7%) sepia(73%) saturate(7304%) hue-rotate(245deg) brightness(71%) contrast(102%);
+}
+
+.Right-Arrow-Button:hover img{
+  filter: brightness(0) saturate(100%) invert(7%) sepia(73%) saturate(7304%) hue-rotate(245deg) brightness(71%) contrast(102%);
+}
+
+/*Footer styling */
+.Footer-Wrapper { 
+  grid-area: Footer-Wrapper;
+  width: 100%;
+  height: 250px;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+
+ .Logo-Footer-Container{
+   height: 250px;
+   width: max-content;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   
+ }
+
+ .Company-Footer-Container{
+  height: 250px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+ 
+}
+
+.Features-Footer-Container{
+  height: 250px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+ 
+}
+
+.Contact-Footer-Container{
+  height: 250px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+
+}
+
+.Footer-Title{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 10px 0 ;
+}
+
+.Footer-Links{
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #222222;
+  text-decoration: none;
+}
+
+.Footer-Links-Copyright{
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #222222;
+  margin: 25px 0 0 0 ;
+}
+
+.Logo-Footer-Container img{
+  margin: 0 0 10px 0;
+}
+
+
+
