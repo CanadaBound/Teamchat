@@ -66,6 +66,12 @@ body{
   overflow-y: auto;
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+body::-webkit-scrollbar{
+DISPLAY:NONE
 }
 
 
