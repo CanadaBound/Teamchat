@@ -18,3 +18,5 @@ A professional, landing page for a business selling an online organisation platf
 
 
 ## **GIFs**
+
+![GIF of teamnchat website](https://github.com/CanadaBound/Teamchat/blob/master/TeamchatGIF.gif "Teamchat website GIF")
