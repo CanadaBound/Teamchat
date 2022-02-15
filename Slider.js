@@ -28,7 +28,7 @@ const slider = function () {
 
 	}
 	if(!firstLoad){
-		slides[slide].scrollIntoView({behavior: 'smooth', inline: 'center'});
+		slides[slide].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
 	}
 	
 	
